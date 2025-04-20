@@ -7,8 +7,7 @@ public class JavaNotesManager {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Step 1: Create JavaFile1.txt
+        
         String file1Name = "JavaFile1.txt";
         String file1Content = """
                 Java is an object-oriented programming language.
@@ -18,19 +17,15 @@ public class JavaNotesManager {
                 """;
         writeToFile(file1Name, file1Content);
 
-        // Step 2: Display JavaFile1.txt
         System.out.println("Contents of JavaFile1.txt:");
         readFile(file1Name);
 
-        // Step 3: Create JavaFile2.txt with first line
         String file2Name = "JavaFile2.txt";
         String file2FirstLine = "This is the first line in this JavaFile2.txt file.\n";
         writeToFile(file2Name, file2FirstLine);
 
-        // Step 4: Copy contents from JavaFile1.txt to JavaFile2.txt using FileInputStream/FileOutputStream
         copyFileContents(file1Name, file2Name);
 
-        // Step 5: Analyze JavaFile1.txt
         analyzeFile(file1Name, "polymorphism");
 
         scanner.close();
